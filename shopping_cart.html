@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/shopping_cart.css" />
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		<script type="text/javascript" src="js/shopping_cart.js"></script>
+		<title></title>
+	</head>
+
+	<body>
+		<div id="main_container">
+			<div id="nav">
+				<div id="nav_in">
+					<ul>
+						<li>
+							<i class="icon-user"></i>
+							<a href="login.html">登录 </a>
+						</li>
+						<li>
+							<a href="register.html">免费注册</a>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<i class="icon-shopping-cart"></i>
+							<a href="#">我的账户</a>
+						</li>
+						<li>
+							<a href="#">付款方式</a>
+						</li>
+						<li>
+							<a href="#">配送范围</a>
+						</li>
+						<li>
+							<i class="icon-question"></i>
+							<a href="info_center.html">帮助中心</a>
+						</li>
+						<li>
+							<a href="#">订购电话：400-686-8888</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="header">
+				<div class="header_logo">
+					<a>
+						<img src="img/logo.png" />
+					</a>
+				</div>
+				<div class="search-pannel">
+					<form>
+						<div class="search-button">
+							<button class="btn-search" type="submit"></button>
+						</div>
+						<div class="seach-common-panel">
+							<input type="text" />
+							<i style="color:gray" class="icon-search i-1"></i>
+							<i style="color:lightgray;" class="icon-microphone i-2"></i>
+						</div>
+					</form>
+				</div>
+			</div>
+			<div id="main_content">
+				<div id="main">
+					<table id="cartTable">
+						<thead>
+							<tr>
+								<th>
+									<label>
+							<input class="check-all check"type="checkbox" />
+							&nbsp;全选
+						</label>
+								</th>
+								<th>商品</th>
+								<th>单价</th>
+								<th>数量</th>
+								<th>小计</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="checkbox">
+									&nbsp;&nbsp;&nbsp;&nbsp;<input class="checkbox check" type="checkbox" />
+								</td>
+								<td class="goods">
+									<div class="p-img">
+										<img src="img/MacBook.jpg" width="100" height="100" />
+									</div>
+									<div class="p-msg">
+										<p>MacBook air</p>
+									</div>
+								</td>
+								<td class="price">6189.00</td>
+								<td class="number">
+									<div>
+										<span class="input-number-decrement">–</span>
+										<input class="input-number" type="text" value="1">
+										<span class="input-number-increment">+</span>
+									</div>
+								</td>
+								<td class="tips">
+									6189.00
+								</td>
+								<td class="delect">
+									删除
+								</td>
+							</tr>
+							<tr>
+								<td class="checkbox">
+									&nbsp;&nbsp;&nbsp;&nbsp;<input class="checkbox check" type="checkbox" />
+								</td>
+								<td class="goods">
+									<div class="p-img">
+										<img src="img/hp.jpg" width="100" height="100" />
+									</div>
+									<div class="p-msg">
+										<p>惠普笔记本</p>
+									</div>
+								</td>
+								<td class="price">5599.01</td>
+								<td class="number">
+									<div>
+										<span class="input-number-decrement">–</span>
+										<input class="input-number" type="text" value="1">
+										<span class="input-number-increment">+</span>
+									</div>
+								</td>
+								<td class="tips">
+									5599.01
+								</td>
+								<td class="delect">
+									删除
+								</td>
+							</tr>
+							<tr>
+								<td class="checkbox">
+									&nbsp;&nbsp;&nbsp;&nbsp;<input class="checkbox check" type="checkbox" />
+								</td>
+								<td class="goods">
+									<div class="p-img">
+										<img src="img/xiaomi.jpg" width="100" height="100" />
+									</div>
+									<div class="p-msg">
+										<p>小米笔记本</p>
+									</div>
+								</td>
+								<td class="price">3499.38</td>
+								<td class="number">
+									<div>
+										<span class="input-number-decrement">–</span>
+										<input class="input-number" type="text" value="1">
+										<span class="input-number-increment">+</span>
+									</div>
+								</td>
+								<td class="tips">
+									3499.38
+								</td>
+								<td class="delect">
+									删除
+								</td>
+							</tr>
+							<tr>
+								<td class="checkbox">
+									&nbsp;&nbsp;&nbsp;&nbsp;<input class="checkbox check" type="checkbox" />
+								</td>
+								<td class="goods">
+									<div class="p-img">
+										<img src="img/asus.jpg" width="100" height="100" />
+									</div>
+									<div class="p-msg">
+										<p>asua华硕笔记本</p>
+									</div>
+								</td>
+								<td class="price">3999.00</td>
+								<td class="number">
+									<div>
+										<span class="input-number-decrement">–</span>
+										<input class="input-number" type="text" value="1">
+										<span class="input-number-increment">+</span>
+									</div>
+								</td>
+								<td class="tips">
+									3999.00
+								</td>
+								<td class="delect">
+									删除
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="infBox">
+						<div class="selectViewList"></div>
+					</div>
+					<div class="foot" id="foot">
+						<ul>
+							<li>
+								&nbsp;&nbsp;&nbsp;&nbsp;<input class="check check-all" type="checkbox" />全选
+							</li>
+							<li id="foot-delectAll">
+								删除
+							</li>
+							<li>
+								</br>
+							</li>
+							<li>
+								</br>
+							</li>
+							<li>
+								</br>
+							</li>
+							<li>
+								<div class="amount-sum">
+									已选择&nbsp;<span id="selected">0</span>&nbsp;件商品
+									<i id="arrow-top" class="icon-chevron-up"></i>
+								</div>
+							</li>
+							<li>
+								<span class="txt txt-new">总价：&yen;</span>
+								<span class="price sumPrice" id="totalMoney">¥0.00</span>
+							</li>
+							<li class="btn-area">
+								<a href="#">结算</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="gap"></div>
+			<div id="footer">
+				<div id="footer_all">
+					<p>Copyright 2011-2012 电脑工作室 All Rights Reserved ICP 备 10011234号</p>
+					<p>注：7x24小时均可网上订购，支持货到付款，我们提供的付款方式有网上银行、银行转账、支付宝、Paypal。当天21:00以后预订的电脑在次日安排配送</p>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>

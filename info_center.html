@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/info_center.css" />
+		<link rel="stylesheet" href="css/font-awesome.min.css" />
+		<script type="text/javascript" src="js/jquery-1.11.3.js" ></script>
+		<script>
+		function todu(n) {
+				if(n < 10) {
+					return '0' + n;
+				} else {
+					return '' + n;
+				}
+			}
+		  window.onload=function()
+		  {
+		  	   function tick() {
+					var odiv=document.getElementById('div1');
+				    var oimg = odiv.getElementsByTagName('img');
+					var oDate = new Date();
+					var str = todu(oDate.getHours()) + todu(oDate.getMinutes()) + todu(oDate.getSeconds());
+					var h=todu(oDate.getHours());
+					var m=todu(oDate.getMinutes());
+					var s=todu(oDate.getSeconds());
+					odiv.innerHTML=h+":"+m+":"+s;
+				}
+				setInterval(tick, 1000);
+				tick();
+               
+				function week() {
+					var odiv2=document.getElementById('div2');
+					var oDate = new Date();
+					var str = oDate.getDay();
+					var arr=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+					odiv2.innerHTML=arr[str];
+				}
+				setInterval(week,1440000);
+				week();
+		  	
+
+
+		  	    var option_1=document.getElementById('option_1');
+				var option_2=document.getElementById('option_2');
+				var button_1=document.getElementById('button_1');
+				var button_2=document.getElementById('button_2');
+				var block_1=document.getElementById('block_1');
+				var block_2=document.getElementById('block_2');
+				var pagination_later=document.getElementsByClassName('pagination_later');
+				var submitButton=document.getElementsByClassName('submit')[0];
+				option_1.onclick=function()
+				{
+					alert("该页面正在开发中...");
+				}
+				option_2.onclick=function()
+				{
+					option_1.className="";
+					option_2.className="option_select";
+				}
+				button_1.onclick=function()
+				{   
+					$(block_2).hide();
+					$(block_1).show();
+					button_1.className="select";
+					button_2.className="";
+				}
+				button_2.onclick=function()
+				{   $(block_1).hide();
+					$(block_2).show();
+					
+					button_2.className="select";
+					button_1.className="";
+				}
+				for(var i=0;i<pagination_later.length;i++)
+				{
+					pagination_later[i].onclick=function()
+					{
+						alert("该页面正在开发中...");
+					}
+				}
+				submitButton.onclick=function()
+				{
+					alert("提交成功！");
+				}
+		  }
+		</script>
+		<title>电脑商城后台管理系统-查询商品</title>
+	</head>
+	<body id="body_search">
+		<div id="container">
+			<div id="time_top">
+				<div class="all_width">	
+					<div id="all_time">
+					<i class="icon-calendar"></i>
+				    <span id="div1">
+					</span>&nbsp;&nbsp;
+					<span id="div2">
+					</span>
+					</div>
+				</div>
+			</div>
+			<div class="all_width">
+				<div id="logo_left">
+				    <a href="index.html">
+				    	<img src="img/logo.png" border="0"  height="70"/>
+				    </a>
+			   </div>
+				<div id="logo_right">
+					<span>
+						<i class="icon-user"></i>
+						<a href="#">欢迎您: admin</a>
+						&nbsp;&nbsp;
+						<i class="icon-adjust"></i>
+						<a href="#">安全退出</a>
+					</span>
+				</div>
+			</div>
+			<div id="main" class="all_width">
+			<br />
+			<br />
+				<div id="option">
+					&nbsp;&nbsp;
+					<span id="option_1">电脑商城后台管理系统</span>
+					&nbsp;&nbsp;
+					<span id="option_2" class="option_select">信息中心</span>
+				</div>
+				<br />
+				<div class="line"></div>
+				<br />
+					<div id="main_left">
+					<ul class="button_bg">
+						<li id="button_1" class="select">
+							<a href="#">
+								<i class="icon-search"></i>
+							查询商品</a>
+						</li>
+						<li id="button_2">
+							<a href="#">
+								<i class="icon-pencil"></i>
+								添加商品</a>
+						</li>
+						<li id="button_3">
+							<a href="#">
+								<i class="icon-shopping-cart"></i>
+								购物统计</a>
+						</li>
+						<li id="button_4">
+							<a href="#">
+								<i class="icon-align-justify"></i>
+								订单管理</a>
+						</li>
+						<li id="button_5">
+							<a href="#">
+								<i class="icon-home"></i>
+								商店设置</a>
+						</li>
+					</ul>
+				</div>
+				<div id="block_1">
+				<div id="main_right">
+					<table width="739" cellpadding="0" cellspacing="0" class="table_search">
+						<tr>
+							<td>日期：</td>
+							<td>
+								<input type="text" value="" id="example"/>
+							</td>
+							<td>关键字：</td>
+							<td>
+								<input type="text" value="关键字"/>
+								<input type="button" value="查询"/>
+							</td>
+							<td>商品分类：</td>
+							<td>
+								<select class="goods_type">
+									<option selected>全部分类</option>
+									<option>按品牌分类</option>
+									<option>按对象分类</option>
+									<option>按用途分类</option>
+									<option>按屏幕尺寸分类</option>
+									<option>按档次分类</option>
+								</select>
+							</td>
+						</tr>
+					</table>
+					<table class="table_result" cellpadding="0" cellspacing="0">
+						<tr>
+							<td>id</td>
+							<td>商品名称</td>
+							<td>类别</td>
+							<td>生产厂家</td>
+							<td>上架时间</td>
+							<td>配送服务</td>
+							<td>附送</td>
+							<td>市价</td>
+							<td>售价</td>
+						</tr>
+						<tr>
+							<td>id</td>
+							<td>商品名称</td>
+							<td>类别</td>
+							<td>生产厂家</td>
+							<td>上架时间</td>
+							<td>配送服务</td>
+							<td>附送</td>
+							<td>市价</td>
+							<td>售价</td>
+						</tr>
+						<tr>
+							<td>id</td>
+							<td>商品名称</td>
+							<td>类别</td>
+							<td>生产厂家</td>
+							<td>上架时间</td>
+							<td>配送服务</td>
+							<td>附送</td>
+							<td>市价</td>
+							<td>售价</td>
+						</tr>
+						<tr>
+							<td>id</td>
+							<td>商品名称</td>
+							<td>类别</td>
+							<td>生产厂家</td>
+							<td>上架时间</td>
+							<td>配送服务</td>
+							<td>附送</td>
+							<td>市价</td>
+							<td>售价</td>
+						</tr>
+					</table>
+					<br />
+					<div class="indexPage">
+						<div class="a_all">
+							<a class="disablepage" href="#">上一页</a>
+							<a class="pagination_later currentpage" href="#">1</a>
+							<a class="pagination_later" href="#">2</a>
+							<a class="pagination_later" href="#">3</a>
+							<a class="pagination_later" href="#">4</a>
+							<a class="pagination_later" href="#">下一页</a>
+							<a class="pagination_later" href="#">尾页</a>
+						</div>
+					</div>
+				</div>
+				</div>
+				<div id="block_2" style=" display: none;">
+					<h3 class="good_title">商品基本信息</h3>
+					<div class="table_addgoods">
+						<table class="table_addgoods">
+							<tr>
+								<td class="tabletop">商品名称</td>
+								<td class="tabletop">商品货号</td>
+								<td class="tabletop">市场售价</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="text" value="" style="width: 210px;" />
+								</td>
+								<td>
+									<input type="text" value="" style="width: 210px;"/>
+								</td>
+								<td>
+									<input type="text" value="" style="width: 210px;"/>
+								</td>
+							</tr>
+							<tr>
+								<td class="tabletop">本店售价</td>
+								<td class="tabletop">消费积分</td>
+								<td class="tabletop">商品图片</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="text" value="" style="width: 210px;" />
+								</td>
+								<td>
+									<input type="text" value="" style="width: 210px;"/>
+								</td>
+								<td>
+									<input type="text" value="" style="width: 210px;"/>
+								</td>
+							</tr>
+							<tr>
+								<td class="linetable" colspan="3"></td>
+							</tr>
+							<tr>
+								<td class="tabletop">商品分类</td>
+								<td class="tabletop">商品品牌</td>
+								<td class="tabletop">是否推广</td>
+							</tr>
+							<tr>
+								<td>
+									<select class="goods_add" style="width: 210px;">
+										<option>笔记本电脑</option>
+										<option>超级本</option>
+										<option>台式电脑</option>
+										<option>服务器</option>
+									</select>
+								</td>
+								<td>
+									<select class="goods_add" style="width: 210px;">
+										<option>志翔</option>
+										<option>飞翔</option>
+										<option>天翔</option>
+										<option>宇翔</option>
+										<option>山姆</option>
+										<option>汉姆</option>
+									</select>
+								</td>
+								<td>
+									<select class="goods_add" style="width: 210px;">
+										<option>是</option>
+										<option>否</option>、
+									</select>
+								</td>
+							</tr>
+						</table>
+						<div class="button_center">
+							<input type="submit" value="提交" class="submit"/>
+						</div>
+					</div>
+					<div class="indexPage">
+						<div class="a_all">
+							<a class="disablepage" href="#">上一页</a>
+							<a class="pagination_later currentpage" href="#">1</a>
+							<a class="pagination_later" href="#">2</a>
+							<a class="pagination_later" href="#">3</a>
+							<a class="pagination_later" href="#">4</a>
+							<a class="pagination_later" href="#">下一页</a>
+							<a class="pagination_later" href="#">尾页</a>
+						</div>
+					</div>
+				</div>
+				<br />
+				<br />
+			    <div class="line"></div>
+			</div>
+			<br />
+			<br />
+			<div id="gap"></div>
+			<div id="addtion">
+				<div class="all_width">
+					&nbsp;&nbsp;&nbsp;
+					<a href="#" class="singel_icon">
+						<div class="icon_bymyselft">
+							<i class="icon-shield icon-4x"></i>
+						</div>
+						<div class="icon_info">
+							<strong>正品保障
+							</strong>
+						    <p>正品保障，提供发票</p>
+						</div>
+						
+					</a>
+					<a href="#" class="singel_icon">
+						<div class="icon_bymyselft">
+							<i class="icon-truck icon-4x" id="icon_truck"></i>
+						</div>
+						<div class="icon_info">
+							<strong>急速物流
+							</strong>
+						    <p>急速物流，急速到达</p>
+						</div>
+						
+					</a>
+					<a href="#" class="singel_icon">
+						<div class="icon_bymyselft">
+							<i class="icon-tags icon-4x" id="icon_heart"></i>
+						</div>
+						<div class="icon_info">
+							<strong>安心售后
+							</strong>
+						    <p>7天之内无理由退换货</p>
+						</div>
+						
+					</a>
+					<a href="#" class="singel_icon">
+						<div class="icon_bymyselft">
+							<i class="icon-align-left icon-4x" id="icon_question"></i>
+						</div>
+						<div class="icon_info">
+							<strong>帮助中心
+							</strong>
+						    <p>专属于您的购物指南</p>
+						</div>
+						
+					</a>
+					
+				</div>
+				
+			</div>
+			<div id="footer">
+				<div id="footer_all">
+					<p>Copyright 2011-2012 电脑工作室 All Rights Reserved ICP 备 10011234号</p>
+					<p>注：7x24小时均可网上订购，支持货到付款，我们提供的付款方式有网上银行、银行转账、支付宝、Paypal。当天21:00以后预订的电脑在次日安排配送</p>
+				</div>
+			</div>
+	</body>
+</html>

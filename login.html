@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link href="css/enter.css" rel="stylesheet" type="text/css">
+	    <link rel="stylesheet" href="css/font-awesome.min.css" />
+	    <script>
+	    	window.onload=function()
+	    	{
+	    		var login_input=document.getElementsByClassName('login_input');
+	    		var login_span=document.getElementsByClassName('login_span');
+	    		for(var i=0;i<login_input.length;i++)
+	    		{
+	    			login_input[i].index=i;
+	    			login_input[i].onclick=function()
+	    			{
+	    				var a;
+	    				a=this.index;
+	    				for(var i=0;i<login_input.length;i++)
+		    			{
+		    				login_input[i].className="login_input";
+		    				login_span[i].className="login_span";
+		    			}
+     	    			this.className+=" ToBlue";
+		    			login_span[a].className+=" toblue";
+	    			}
+	    			
+	    		}
+
+	    	}
+	    </script>
+	</head>
+	<body>
+		<div id="head">
+			<a href="index.html">
+				<img src="img/logo.png" height="75" />
+			</a>
+			<a href="register.html">
+			<div id="reg_logo">立即注册</div></a>
+		</div>
+		<div id="center">
+			<div id="center_all">
+				<img src="img/login-bg.jpg" />
+				<div id="border">
+					<div id="log_in_name">
+						<h3>会员登录</h3>
+					</div>
+					<div id="log_in_content">
+						<ul>
+							<li >
+								<span class="login_span">
+				                  <i class="icon-2x icon-user" ></i>
+				            	</span>
+								<input type="text" placeholder="手机/邮箱/用户名" class="login_input"/>
+							</li>
+							<li>
+								<span class="login_span">
+						         <i class="icon-lock icon-2x"></i>
+					            </span>
+								<input type="password" placeholder="输入密码" class="login_input"/>
+							</li>
+						</ul>
+						<div id="auto_login">
+							<input type="checkbox" />自动登录
+							<span>
+								<a href="forget_password.html">
+								<i class="icon-question"></i>
+								忘记密码	
+								</a>
+								</span>
+						</div>
+						<div class="button_center">
+							
+							<input type="button" value="登录" />
+						</div>
+					</div>
+					<div id="others">
+						<span>其他方式登录：</span>
+						<i class="icon-facebook"></i>
+						<i class="icon-weibo"></i>
+						<i class="icon-twitter"></i>
+					</div>
+			    </div>
+			</div>		
+		</div>
+		<div id="bottom">
+			<p>Copyright © 2008-2016 上海育创网络科技股份有限公司。备案号:沪ICP备10015848号-5</p>
+			<p>四川成都公安分局备案编号:3101150335558824</p>
+		</div>
+	</body>
+
+</html>

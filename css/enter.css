@@ -1,0 +1,230 @@
+body,div,img,a,h3,h2,span{
+	margin: 0;
+	padding: 0;
+}
+#head{
+	width: 1200px;
+	height: 88px;
+	margin: 0 auto;
+}
+#head img{
+	margin-top: 5px;
+}
+#head #reg_logo{
+	float: right;
+	width: 115px;
+	height: 35px;
+/*	border:1px solid black;*/
+	line-height:35px;
+	margin-top:23px;
+/*	margin-right:30px;*/
+    text-align:center;
+    background:#FF3F08;
+    color: white;
+    border-radius:5px;
+    font-family:"微软雅黑";
+    text-decoration:none;
+}
+#center{
+	width: 100%;
+	height: 576px;
+/*	background:url(https://image.suning.cn/uimg/cms/img/148049882598227265.jpg);*/
+    background:#FFA200;
+    position: relative;
+}
+#center_all{
+	width: 1200px;
+	height: 576px;
+	margin: 0 auto;
+	position: relative;
+}
+#center #border{
+	width: 413px;
+	height: 459px;
+	float: right;
+	position: absolute;
+	right: 20px;
+	top: 60px;
+	background: white;
+	border-radius: 10px;
+}
+#border #log_in_name{
+	width: 413px;
+	height: 90px;
+}
+#log_in_name h3{
+    line-height: 90px;
+	color: sandybrown;
+	font-family: "幼圆";
+	font-size: 30px;
+	text-align: center;
+}
+#border #log_in_content{
+	position: relative;
+	width:413px;
+	height: 250px;
+}
+#log_in_content ul{
+	position: absolute;
+	left: -12px;
+}
+#border #log_in_content ul li{
+	list-style: none;
+	height: 40px;
+    line-height: 40px;
+    float: left;
+    margin-bottom: 20px;
+    width: 100%;   
+    margin-left: 40px;
+    position: relative;
+}
+#log_in_content ul li span,ul li input{
+	display: inline-block;
+	float: left;
+}
+.login_span{
+	position: absolute;
+	height: 34px;
+	padding-left: 10px;
+	padding-right: 10px;
+	width: 17px;
+	left:-35px;
+	padding-top: 4px;
+	border: 1px solid darkgray;
+	border-right: none ;
+}
+.login_input{
+	border: 1px solid darkgray;
+    border-left: none;
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 18px;
+    line-height: 18px;
+    width: 296px;
+    padding-left: 15px;
+    background-color: #FFF;
+    vertical-align: middle;//垂直对齐
+    color: #a9a9a9;
+}
+
+#log_in_content a{
+	text-decoration: none;
+	color: black;
+	font-family: "幼圆";
+	font-weight: bold;
+}
+#log_in_content ul li a{
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	position: absolute;
+	right: 15px;
+}
+#auto_login{
+	position: absolute;
+	width:340px ;
+    bottom: 100px;
+    left: 33px;
+    font-family: "幼圆";
+}
+#auto_login span{
+	font-weight: bold;
+	float: right;
+}
+.button_center{
+	width: 340px;
+	height: 40px;
+    position: absolute;
+    bottom: 20px;
+    left: 40px;
+}
+.button_center input{
+	width: 340px;
+	height: 40px;
+    background-color: #00a4e1;
+    font-size: 18px;
+    color: white;
+    border: 0;
+    cursor: pointer;
+}
+#others{
+	width: 250px;
+	height: 40px;
+	margin: 10px auto;
+	line-height: 40px;
+}
+#others span{
+	font-weight: 700;
+	font-family:"幼圆";
+	font-size: 20px;
+}
+#others i{
+	margin-right: 10px;
+}
+/*bottom*/
+#bottom{
+   
+}
+#bottom p{
+	text-align: center;
+	color: #666;
+}
+/*register*/
+.phone_right{
+	border: none;
+	height: 41px;
+	width: 130px;
+    background-color: #0bc04a;
+    border: 1px solid #e5e5e5;
+    color: #fff;
+    cursor: pointer;
+    margin-left:13px ;
+}
+.register_button_center{
+	width: 340px;
+	height: 40px;
+    position: absolute;
+    bottom: 120px;
+    left: 40px;
+}
+.register_button_center input{
+	width: 340px;
+	height: 40px;
+    background-color: #00a4e1;
+    font-size: 18px;
+    color: white;
+    border: 0;
+    cursor: pointer;
+}
+/*TonBlue*/
+.ToBlue{
+	border: 2px solid #3199F4;
+    border-left: none;
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: 18px;
+    line-height: 18px;
+    width: 296px;
+    padding-left: 15px;
+    background-color: #FFF;
+    vertical-align: middle;//垂直对齐
+    color: #a9a9a9;
+}
+.toblue{
+	position: absolute;
+	height: 34px;
+	padding-left: 10px;
+	padding-right: 10px;
+	width: 17px;
+	left:-35px;
+	padding-top: 4px;
+	border: 2px solid #3199F4;
+	border-right: none ;
+}
+/*changecolor*/
+#others i:hover {
+	color:#FFA200;
+	cursor: pointer;
+}
